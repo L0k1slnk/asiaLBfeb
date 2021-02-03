@@ -1,0 +1,318 @@
+.table {
+    width: 100%;
+    border-radius: 24px;
+    color: #fff;
+    padding: 0 24px 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+
+    background: #7B1313;
+
+    &-wrapper {
+        margin: 5vw 0 7vw;
+        background: linear-gradient(90deg, #F7E595 3.5%, #D59F39 90.72%);
+        border-radius: 24px;
+        padding: 3px;
+
+        &--silver {
+            margin: 1vw 0;
+            background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+        }
+    }
+
+    .desktop & {
+        @media screen and (min-width: $breakpoint_desktop) {
+            max-width: 960px;
+        }
+    }
+
+
+    &--primary {
+
+        .table-wrapper--silver & {
+            &:after,
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            background: url("imgs/flower.svg") no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            bottom: -6vw;
+            left: -6vw;
+            z-index: -1;
+
+            //.desktop & {
+            //    @media screen and (min-width: $breakpoint_desktop) {
+            //        width: 60px;
+            //        height: 60px;
+            //        top: -30px;
+            //        left: -20px;
+            //    }
+            //}
+        }
+        &:after {
+            content: '';
+            background: url("imgs/cloud_filled.svg") no-repeat center center;
+            background-size: contain;
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            bottom: 50%;
+            right: -10vw;
+            z-index: -1;
+
+        }
+    }
+
+    &--secondary {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 5vw 0;
+
+        .table_header_col {
+            line-height: 3.2;
+        }
+        .table_body_col {
+            line-height: 2.6;
+        }
+    }
+
+    &_header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-content: center;
+        border-bottom: 1px solid #FFf;
+        opacity: .5;
+        font-size: 1.7vw;
+
+        .mobile.portrait & {
+            font-size: 1.2em;
+        }
+
+        .desktop & {
+            @media screen and (min-width: $breakpoint_desktop) {
+
+            }
+        }
+
+        &--secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px 8px 0px 0px;
+            color: #fff;
+            overflow: hidden;
+            opacity: 1;
+        }
+
+        &_col {
+            width: 40%;
+            text-align: center;
+            line-height: 4.5;
+
+            &--pos {
+                width: 20%;
+            }
+        }
+    }
+
+    &_body {
+        max-height: 70vh;
+        overflow: auto;
+        scroll-behavior: smooth;
+
+        .desktop & {
+            @media screen and (min-width: $breakpoint_desktop) {
+
+                max-height: 700px;
+            }
+        }
+
+        &_row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            align-content: center;
+            border-bottom: 0.5px solid #FFFFFF;
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+
+            .table--primary & {
+                &:nth-of-type(1) {
+                    .table_body_col--pos {
+                        text-indent: -9999px;
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            @include centered;
+                            background: url("imgs/gold.png") no-repeat center center;
+                            background-size: contain;
+                            width: 2vw;
+                            height: 2vw;
+                            .mobile.portrait & {
+                                width: 4vw;
+                                height: 4vw;
+                            }
+
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    .table_body_col--pos {
+                        text-indent: -9999px;
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            @include centered;
+                            background: url("imgs/silver.png") no-repeat center center;
+                            background-size: contain;
+                            width: 2vw;
+                            height: 2vw;
+
+                            .mobile.portrait & {
+                                width: 4vw;
+                                height: 4vw;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    .table_body_col--pos {
+                        text-indent: -9999px;
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            @include centered;
+                            background: url("imgs/bronse.png") no-repeat center center;
+                            background-size: contain;
+                            width: 2vw;
+                            height: 2vw;
+                            .mobile.portrait & {
+                                width: 4vw;
+                                height: 4vw;
+                            }
+
+                        }
+                    }
+                }
+
+                .table_body_col {
+                    .desktop & {
+                        font-size: 1.3vw;
+                    }
+                    line-height: 3;
+                }
+            }
+        }
+
+        &_col {
+            width: 40%;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+
+            &--pos {
+                width: 20%;
+            }
+
+            &--val {
+                @include gradientText;
+
+                .table-wrapper--silver & {
+                    @include gradientText('silver');
+                }
+
+                .table--secondary & {
+                    color: #fff;
+                    -webkit-text-fill-color: #fff;
+                }
+            }
+        }
+    }
+
+    &_btn {
+        span {
+            @include gradientText;
+            .table-wrapper--silver & {
+                @include gradientText('silver');
+            }
+        }
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 3.3vw;
+        padding: 0 2em;
+        display: block;
+        transition: all .3s ease;
+        line-height: 3.3vw;
+        background: #7B1313;
+        cursor: pointer;
+
+
+        &-wrapper {
+            background: linear-gradient(90deg, #F7E595 3.5%, #D59F39 90.72%);
+            border-radius: 3.3vw;
+            padding: 2px;
+            .table-wrapper--silver & {
+                background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+            }
+        }
+
+        .mobile.portrait & {
+            line-height: 8vw;
+        }
+
+        &:hover {
+            box-shadow: 0 0 50px 12px #F7E595, 0 0 12px 2px #D59F39;
+
+            .table-wrapper--silver & {
+                box-shadow: 0 0 50px 12px #F7F7F7, 0 0 12px 2px #999999;
+            }
+        }
+        &:active {
+            //background: #ffa6a638;
+        }
+
+        .desktop & {
+            @media screen and (min-width: $breakpoint_desktop) {
+                //margin: fz(24) auto;
+                //font-size: fz(32);
+                //border-radius: fz(30);
+                //line-height: fz(60);
+                height: auto;
+            }
+        }
+
+
+    }
+
+    &_footer {
+        border-bottom: 0;
+        justify-content: center;
+        padding: 3vw 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-content: center;
+        position: relative;
+        .mobile.portrait & {
+            padding: 6vw 0;
+        }
+    }
+}

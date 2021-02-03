@@ -1,0 +1,22 @@
+{
+  "name": "asiaLBjan",
+  "version": "0.0.1",
+  "description": "",
+  "main": "Gruntfile.js",
+  "author": "L0k1",
+  "devDependencies": {
+    "@lodder/grunt-postcss": "^3.0.0",
+    "autoprefixer": "*",
+    "cssnano": "*",
+    "cssnext": "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-newer": "*",
+    "postcss": "^8.1.7"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PT New Year Race</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="scene">
+    <div id="scene" class="scene-parallax">
+        <div class="scene_layer z10" data-depth="0.2">
+            <div class="scene_bull"></div>
+        </div>
+        <div class="scene_layer" data-depth="-0.1">
+            <div class="scene_ground"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.45">
+            <div class="scene_cloud scene_cloud--filled scene_cloud--medium pos5"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.4">
+            <div class="scene_cloud scene_cloud--filled scene_cloud--big pos1"></div>
+        </div>
+        <div class="scene_layer" data-depth="-0.5">
+            <div class="scene_cloud scene_cloud--stroked scene_cloud--big scene_cloud--flip pos2"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.14">
+            <div class="scene_cloud scene_cloud--stroked scene_cloud--small scene_cloud--flip pos3  "></div>
+        </div>
+        <div class="scene_layer" data-depth="0.5">
+            <div class="scene_cloud scene_cloud--stroked scene_cloud--medium pos4"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.25">
+            <div class="scene_spark scene_spark--big"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.12">
+            <div class="scene_spark scene_spark--medium"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.1">
+            <div class="scene_spark scene_spark--small"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.35">
+            <div class="scene_wheel scene_wheel--medium"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.3">
+            <div class="scene_wheel scene_wheel--big"></div>
+        </div>
+        <div class="scene_layer" data-depth="-0.15">
+            <div class="scene_wheel scene_wheel--b"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.2">
+            <div class="scene_flower scene_flower--medium"></div>
+        </div>
+        <div class="scene_layer" data-depth="0.56">
+            <div class="scene_flower scene_flower--big"></div>
+        </div>
+    </div>
+    <div class="scene_content">
+        <div class="logo"></div>
+        <div class="scene_name">PT New Year Race</div>
+        <div class="scene_price">￥1,800,000</div>
+        <div class="scene_date">FEBRUARY 11—26</div>
+    </div>
+    <div class="scene_description">
+        <div class="wrapper">
+            Win big prizes of total <span>¥1,800,000</span><br>
+            2 weekly leaderboards<br>
+            16 daily tournaments
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="wrapper">
+        <div class="tabs">
+            <input type="radio" class="fn-radio" id="daily" name="tabs" checked value="day">
+            <input type="radio" class="fn-radio" id="weekly" name="tabs" value="week">
+            <input type="radio" class="fn-radio" id="completed" name="tabs" value="completed">
+            <div class="tabs-wrapper">
+                <label for="daily" class="tab" data-text="Daily Race"><span><span>Daily Race</span></span></label>
+                <label for="weekly" class="tab" data-text="Weekly Race"><span><span>Weekly Race</span></span></label>
+                <label for="completed" class="tab" data-text="Completed Races"><span><span>Completed Races</span></span></label>
+            </div>
+
+            <div class="tab-header fn-tab fn-daily">Daily Race</div>
+            <div class="tab-header fn-tab fn-weekly">Weekly Race</div>
+            <div class="tab-header tab-header--silver fn-tab fn-completed">Completed Races</div>
+            <div class="text fn-tab fn-daily">11th of February<br>12:00am (GMT+8) — 12:00am (GMT+8) of the next day</div>
+            <div class="text fn-tab fn-weekly">11th—18th of February </div>
+            <div class="text-header fn-tab fn-daily fn-weekly">
+                Description:
+            </div>
+            <div class="text  fn-tab fn-daily fn-weekly">
+                The ranking list is calculated based on the total win amount in <br>CNY on the selected games during the
+                race period.
+            </div>
+            <div class="table-wrapper fn-tab fn-daily fn-weekly">
+                <section class="table table--primary" id="lbTable">
+                    <div class="table_header">
+                        <div class="table_header_col table_header_col--pos">Rank</div>
+                        <div class="table_header_col table_header_col--name">Username</div>
+                        <div class="table_header_col table_header_col--val">Points</div>
+                    </div>
+                    <div class="table_body" id="lbTableBody">
+
+                    </div>
+                    <div class="table_footer">
+                        <span class="table_btn-wrapper">
+                            <span class="table_btn" id="loadMore"><span>Show more</span></span>
+                        </span>
+                    </div>
+                </section>
+            </div>
+            <h3 class="text-title fn-tab fn-daily fn-weekly">Prize table</h3>
+            <section class="table table--secondary  fn-tab fn-daily">
+                <div class="table_header table_header--secondary">
+                    <div class="table_header_col table_header_col--pos">Winners</div>
+                    <div class="table_header_col table_header_col--name">Prize CNY</div>
+                    <div class="table_header_col table_header_col--val">Total CNY</div>
+                </div>
+                <div class="table_body">
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">1</div>
+                        <div class="table_body_col table_body_col--name"> ¥ 8,000</div>
+                        <div class="table_body_col table_body_col--val"> ¥ 8,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">2</div>
+                        <div class="table_body_col table_body_col--name"> ¥1,800 </div>
+                        <div class="table_body_col table_body_col--val"> ¥1,800 </div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">3</div>
+                        <div class="table_body_col table_body_col--name">¥888 </div>
+                        <div class="table_body_col table_body_col--val">¥888 </div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">4-5</div>
+                        <div class="table_body_col table_body_col--name">¥180</div>
+                        <div class="table_body_col table_body_col--val"> ¥360 </div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">6-10</div>
+                        <div class="table_body_col table_body_col--name"> ¥88 </div>
+                        <div class="table_body_col table_body_col--val"> ¥440 </div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">11-50</div>
+                        <div class="table_body_col table_body_col--name"> ¥38 </div>
+                        <div class="table_body_col table_body_col--val">¥1,520 </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table table--secondary  fn-tab fn-weekly">
+                <div class="table_header table_header--secondary">
+                    <div class="table_header_col table_header_col--pos">Winners</div>
+                    <div class="table_header_col table_header_col--name">Prize CNY</div>
+                    <div class="table_header_col table_header_col--val">Total CNY</div>
+                </div>
+                <div class="table_body">
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">1</div>
+                        <div class="table_body_col table_body_col--name">¥180,000</div>
+                        <div class="table_body_col table_body_col--val">¥180,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">2-3</div>
+                        <div class="table_body_col table_body_col--name"> ¥80,500</div>
+                        <div class="table_body_col table_body_col--val">¥161,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">4-10</div>
+                        <div class="table_body_col table_body_col--name">¥18,000</div>
+                        <div class="table_body_col table_body_col--val">¥126,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">11-50</div>
+                        <div class="table_body_col table_body_col--name">¥3,800</div>
+                        <div class="table_body_col table_body_col--val">¥152,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">51-100</div>
+                        <div class="table_body_col table_body_col--name">¥1,800</div>
+                        <div class="table_body_col table_body_col--val">¥90,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">101-500</div>
+                        <div class="table_body_col table_body_col--name">¥180</div>
+                        <div class="table_body_col table_body_col--val">¥72,000</div>
+                    </div>
+                    <div class="table_body_row">
+                        <div class="table_body_col table_body_col--pos">501-1000</div>
+                        <div class="table_body_col table_body_col--name">¥38</div>
+                        <div class="table_body_col table_body_col--val">¥19,000</div>
+                    </div>
+                </div>
+            </section>
+            <section class="tc fn-tab fn-daily">
+                <div class="tc_header">Rules</div>
+
+                <ol class="tc_list">
+                    <li class="tc_list-item">Player must have an active account in CNY currency.</li>
+                    <li class="tc_list-item">Participate in the selected games during the race period.</li>
+                    <li class="tc_list-item">The leaderboard is updated every 60 minutes.</li>
+                    <li class="tc_list-item">Ranking is based on player's total win during the race period.</li>
+                    <li class="tc_list-item">Leader board display is in points.
+                    </li>
+                    <li class="tc_list-item">The award will be credited to player account up to 2 business
+                        days after the race is completed.
+                    </li>
+                    <li class="tc_list-item">Prize can’t be claimed more than twice if player is in the top 3
+                        ranking position.
+                    </li>
+                    <li class="tc_list-item">PT reserves the right to disqualify or dispute any award at any
+                        time for any reason, if we believe player is attempting to take
+                        advantage of any software or system malfunction, or violating
+                        the terms and conditions of this leaderboard race.
+                    </li>
+                    <li class="tc_list-item">Wins from all Playtech Slots are participating in the race with
+                        the exception of excluded slots*
+                    </li>
+                </ol>
+            </section>
+            <section class="tc fn-tab fn-weekly">
+                <div class="tc_header">Rules</div>
+
+                <ol class="tc_list">
+                    <li class="tc_list-item">Player must have an active account in CNY currency.</li>
+                    <li class="tc_list-item">Participate in the selected games during the race period.</li>
+                    <li class="tc_list-item">The leaderboard is updated every 60 minutes.</li>
+                    <li class="tc_list-item">Ranking is based on player's total bets during the race period.</li>
+                    <li class="tc_list-item">Leader board display is in points.
+                    </li>
+                    <li class="tc_list-item">The award will be credited to player account up to 2 business
+                        days after the race is completed.
+                    </li>
+                    <li class="tc_list-item">Prize can’t be claimed more than twice if player is in the top 10
+                        ranking position.
+                    </li>
+                    <li class="tc_list-item">PT reserves the right to disqualify or dispute any award at any
+                        time for any reason, if we believe player is attempting to take
+                        advantage of any software or system malfunction, or violating
+                        the terms and conditions of this leaderboard race.
+                    </li>
+                    <li class="tc_list-item">Bets from all Playtech Slots are participating in the race with
+                        the exception of excluded slots*
+                    </li>
+                </ol>
+            </section>
+            <section class="completed-holder fn-tab fn-completed">
+                <div class="completed-daily fn-completed-daily">
+                    <div class="completed-header">Daily Races</div>
+                    <div class="chbx-holder" id="completedDailyHolder">
+                        <div class="text">Leaderboard is running, don't miss out... </div>
+<!--                        <div class="chbx_item">-->
+<!--                            <input type="checkbox" class="chbx" id="chbx1">-->
+<!--                            <label for="chbx1" class="chbx-label">-->
+<!--                                <span><span>26.02.2021</span></span>-->
+<!--                            </label>-->
+<!--                            <div class="chbx-content">-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+
+                </div>
+                <div class="completed-weekly fn-completed-weekly">
+                    <div class="completed-header">Weekly Races</div>
+                    <div class="chbx-holder" id="completedWeeklyHolder">
+                        <div class="text">Leaderboard is running, don't miss out... </div>
+                    </div>
+
+                </div>
+            </section>
+            <div class="text-header text-header--small fn-tab fn-daily fn-weekly">*Excluded slots</div>
+            <div class="text text--small fn-tab fn-daily fn-weekly">
+                LongLongLong, Triple Monkey, Super Lion, Gem Queen, Zhao Cai Tong Zi, Jin Qian Wa, Inca Jackpot ,
+                Queen Of Wands, Feng Kuang Ma Jiang, Chaoji 888, Heavenly Ruler, Si Ling, 8 Treasures 1 Queen, Si Xiang,
+                Haoshi Cheng Shuang, Zhao Cai Tong Zi Jackpot, Jin Qian Wa Jackpot , Ri Ri Sheng Cai, Fortune Lions,
+                Egypt spin, Metal Reel , Fire Reel, Asian Fantasy, Water Reel , Warriors Gold, Aztec Reel ,
+                Dragon Riches Liu Fu Shou, Five Tiger Generals, Respin Mania Wu Shi Jackpot , Riverboat Reel ,
+                Ri Ri Jin Cai, Savannah Cash, Hot KTV, Fortune Day, Wu Lu Cai Shen, Ying Xiong Lu Bu,Tiao Tiao Mao Mao,
+                Sugar Land, Cash Fish, Fish Prawn Crab
+            </div>
+        </div>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer_logo"></div>
+        </div>
+    </footer>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>

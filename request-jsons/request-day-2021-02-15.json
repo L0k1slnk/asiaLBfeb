@@ -1,0 +1,22 @@
+{
+   "sites": [
+      "TAIWAN-MEGATRON",
+      "LUCKYSPIN88-PROD"
+   ],
+   "inputs": {
+      "ichour": 1,
+      "startdate": "2021-02-14 16:00:00",
+      "enddate": "2021-02-15 16:00:00",
+      "timezone": "Etc/GMT",
+      "currency": "CNY",
+      "sdin": 1,
+      "instance": [
+         1769,
+         1757
+      ],
+      "ct10": "PTJANRACE",
+      "game": "hb,ashadv,aogmt,agoeg,zeus,aogroo,aogmm,aeolus,aogs,ftsis,furf,athn,hrcls,aogrots,ashamw,anwild,arc,ashwgaa,art,gtsatq,bs,bl,bt,bob,ashbob,bfb,ct,catqc,ctiv,chl,ashcpl,cm,ccccny,gtscnb,gtscbl,c7,gtsdrdv,mobdt,dnr,dlm,drgch,gtsdgk,eas,epa,esm,evj,ashfta,fcgz,gtsflzt,gtsfc,fbr,fow,frtf,fxf,foy,fdtjg,fdt,fmn,ashfmf,fnfrj,fff,fm,fmjp,popc,ges,glrj,grel,glg,gos,bib,grbjp,gro,hlf,hlf2,hh,ashhof,ashhotj,hk,gts50,ashicv,gtsir,infdrg,irl,jpgt,gtsje,jnglg,lndg,legwld,ght_a,ljxy,lm,lumli,mgstk,gtsmrln,mfrt,mnkmn,mcb,nk,nian,pmn,pgv,pst,phtd,paw,pnp,pisa,gtspor,phot,ririshc,rbcp,rky,rng2,sfh,gtssmbr,ssp,samz,shmst,sis,sib,ashsbd,srcg,sol,gtsswk,cnpr,tpd2,tht,dcv,ashglss,gtsgme,donq,tmqd,tigc,ashtmd,topg,ttc,totl,trl,ub,er,vcstd,gts52,wotp,whk,whk2,gtswg,wis,ashwdw,gtswng,wlg,xufe,yclong,zcjb,zcjbjp,gpas_28dman_pop,gpas_5aogold_pop,gpas_gogold_pop,gpas_aoggagiants_pop,gpas_aogkasgard_pop,gpas_aogrotsea_pop,gpas_aognwot_pop,gpas_appower_pop,gpas_aogetroy_pop,gpas_aogggriffin_pop,gpas_aogrotu_pop,gpas_aluck_pop,gpas_betwilds_pop,gpas_bbells_pop,gpas_bwizard_pop,gpas_bomaway_pop,gpas_boking_pop,gpas_bblitz2_pop,gpas_cways_pop,gpas_cotvalk_pop,gpas_ccave_pop,gpas_dbond_pop,gpas_dragonchi_pop,gpas_dsparks_pop,gpas_eemeralds_pop,gpas_elady_pop,gpas_extrfruits_pop,gpas_fatchoy_pop,gpas_fiesta_pop,gpas_atrail_pop,gpas_rempress_pop,gpas_sgift_pop,gpas_fgift_pop,gpas_rgift_pop,gpas_gemburst_pop,gpas_ggrizzly_pop,gpas_gpnyg_pop,gpas_tfortune_pop,gpas_ttreasure_pop,gpas_gmacaque_pop,gpas_buddhaways_pop,gpas_hice_pop,gpas_jflong_pop,gpas_xjinfu_pop,gpas_jmoon_pop,gpas_jhreels_pop,gpas_kbanzai_pop,gpas_lotwild2_pop,gpas_lotj_pop,gpas_lheart_pop,gpas_lemeralds_pop,gpas_lottiger_pop,gpas_mwilds_pop,gpas_nsshen_pop,gpas_strongox_pop,gpas_pluck_pop,gpas_panthpays_pop,gpas_scqueen_pop,gpas_hydra_pop,gpas_mquest_pop,gpas_rothr_pop,gpas_rriches_pop,gpas_rrider_pop,gpas_satsumo_pop,gpas_sjungle_pop,gpas_squeen_pop,gpas_spacedig_pop,gpas_sstrike_pop,gpas_sexiles_pop,gpas_tstacks_pop,gpas_tigertdp_pop,gpas_tttotems_pop,gpas_tgift_pop,gpas_tsgift_pop,gpas_wlava_pop,gpas_wwd_pop,caravan-to-cairo,clover-rollover-2,crystal-lotus,cup-carnaval,fireworks-frenzy,fluffy-favourites,heart-burst,lucha-rumble,shamans-dream-2,stampede,white-wizard,xingyun-baozhu",
+      "tlentity": "TLELUCKYSTONEMYR,TLELUCKYSTONECNY,TLELUCKYSTONETHB,TLELUCKYSTONEIDR,TLELUCKYSTONEKRW,TLELUCKYSTONEVND,TLELUCKYSTONEINR,GTLCCNYTLE1,OGCNYTLE",
+      "sortby": 3
+   }
+}

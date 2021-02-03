@@ -1,0 +1,44 @@
+$c_red: #7A1212;
+$c_red_bg: #7B1313;
+$c_yellow: #FFC208;
+
+@mixin gradientText($color: 'gold') {
+  @if $color == 'silver' {
+    background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+  }
+  @else {
+    background: linear-gradient(90deg, #F7E595 3.5%, #D59F39 90.72%);
+  }
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+$breakpoint_desktop: 700px;
+$breakpoint_desktop_mid: 960px;
+
+@mixin centered($direction: 'xy') {
+  @if $direction == 'xy' {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else {
+    @if $direction == 'x' {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @if $direction == 'y' {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@mixin animated {
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}

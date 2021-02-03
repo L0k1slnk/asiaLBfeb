@@ -1,0 +1,356 @@
+.scene {
+    width: 100%;
+    //height: 50vw;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(123, 19, 19, 0) 0%, #7B1313 96%),url('imgs/p2.svg');
+
+    &-parallax {
+        height: 100%;
+        width: 100%;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+    }
+
+    &_layer {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &_content {
+        width: 60%;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+
+        .mobile.portrait & {
+            width: 100%;
+        }
+    }
+
+    &_name {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3vw;
+        text-shadow: 0px 1px 1px #5B0F0F;
+        .mobile.portrait & {
+            font-size: 5vw;
+            margin-top: 60vw;
+        }
+    }
+
+    &_price {
+        @include gradientText;
+        font-size: 7vw;
+        font-weight: 700;
+
+        .mobile.portrait & {
+            font-size: 12vw;
+        }
+    }
+
+    &_date {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.7vw;
+        text-shadow: 0px 1px 1px #5B0F0F;
+
+        .mobile.portrait & {
+            font-size: 4vw;
+        }
+    }
+    &_description {
+        font-size: 3vw;
+        font-weight: bold;
+        //margin-top: 15vw;
+        margin-top: 10vw;
+        span {
+            @include gradientText;
+        }
+
+        .mobile.portrait & {
+            font-size: 5vw;
+        }
+    }
+
+
+
+    &_cloud {
+        @include animated;
+        position: absolute;
+        background-position: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.pos1 {
+            top: -13%;
+            left: -20%;
+            .mobile.portrait & {
+                top: 0;
+            }
+        }
+
+        &.pos2 {
+            //top: -23%;
+            //left: 30%;
+
+            left: 26%;
+            top: -33%;
+            .mobile.portrait & {
+                top: 30vw;
+                left: 85%;
+            }
+
+        }
+
+        &.pos3 {
+            top: 0;
+            left: 8%;
+        }
+
+        &.pos4 {
+            left: 80%;
+            top: 5%;
+        }
+
+        &.pos5 {
+            //left: 54%;
+            //top: 20%;
+            //width: 15vw;
+
+            left: 52%;
+            top: 14%;
+            width: 11vw;
+
+            .mobile.portrait & {
+                left: 18%;
+                top: 23vw;
+                width: 21vw;
+            }
+        }
+
+        &--filled {
+            background-image: url('imgs/cloud_filled.svg');
+        }
+
+        &--stroked {
+            background-image: url('imgs/cloud_stroked.svg');
+        }
+
+        &--flip {
+            transform: rotate(180deg);
+        }
+
+        &--small {
+            width: 5vw;
+            height: 4vw;
+        }
+
+        &--medium {
+            width: 10vw;
+            height: 8vw;
+        }
+
+        &--big {
+            width: 35vw;
+            height: 27vw;
+        }
+    }
+
+    &_bull {
+        //width: 40vw;
+        //height: 40vw;
+        width: 30vw;
+        height: 30vw;
+        background: url("imgs/bull.svg") no-repeat 50%;
+        background-size: contain;
+        //right: 2%;
+        //top: 10%;
+        right: 15%;
+        top: 5%;
+        position: absolute;
+
+        .mobile.portrait & {
+            width: 50vw;
+            right: auto;
+            @include centered('x');
+            z-index: 10;
+            top: 20vw;
+        }
+    }
+
+    &_ground {
+        position: absolute;
+        //width: 50vw;
+        //height: 10vw;
+        width: 38vw;
+        height: 2vw;
+        background: url("imgs/ground.svg") no-repeat 50%;
+        background-size: contain;
+        //right: 2%;
+        top: 64%;
+        right: 12%;
+
+        .mobile.portrait & {
+            right: auto;
+            @include centered('x');
+            z-index: 10;
+            top: 55vw;
+        }
+    }
+
+    &_spark {
+        @include animated;
+        position: absolute;
+        background: url("imgs/spark.svg") no-repeat 50%;
+        background-size: contain;
+        &--big {
+            //width: 5vw;
+            //height: 5vw;
+            //right: 35%;
+            top: 5%;
+
+            width: 4vw;
+            height: 4vw;
+            right: 40%;
+
+            .mobile.portrait & {
+                width: 7vw;
+                height: 7vw;
+                right: 25%;
+            }
+        }
+        &--medium {
+            width: 3vw;
+            height: 3vw;
+            right: -1.5vw;
+            top: 40%;
+
+            .mobile.portrait & {
+                width: 3vw;
+                height: 3vw;
+                right: 86vw;
+                top: 40vw;
+            }
+
+        }
+        &--small {
+            width: 1.5vw;
+            height: 1.5vw;
+            right: 10%;
+            top: 5%;
+
+            .mobile.portrait & {
+                width: 15vw;
+                height: 15vw;
+                right: -7vw;
+                top: 86vw;
+            }
+        }
+    }
+
+    &_wheel {
+        @include animated;
+        position: absolute;
+        background: url("imgs/wheel.svg") no-repeat 50%;
+        background-size: contain;
+        &--big {
+            //width: 20vw;
+            //height: 20vw;
+            //right: 15%;
+            top: 5%;
+            width: 16vw;
+            height: 16vw;
+            right: 26%;
+            animation: rotating 50s linear infinite;
+            .mobile.portrait & {
+                width: 30vw;
+                height: 30vw;
+                right: 42%;
+                top: 15vw;
+
+            }
+        }
+        &--b {
+            //width: 20vw;
+            //height: 20vw;
+            left: -10vw;
+            //top: 60%;
+            width: 17vw;
+            height: 17vw;
+            top: 55%;
+            .mobile.portrait & {
+                top: 55vw;
+            }
+        }
+        &--medium {
+            //width: 10vw;
+            //height: 10vw;
+            //right: 37%;
+            //top: 50%;
+            width: 8vw;
+            height: 8vw;
+            right: 39%;
+            top: 41%;
+            animation: reverse rotating 40s linear infinite;
+
+            .mobile.portrait & {
+                width: 15vw;
+                height: 15vw;
+                right: 65%;
+                top: 42vw;
+            }
+        }
+    }
+
+    &_flower {
+        @include animated;
+        position: absolute;
+        background: url("imgs/flower.svg") no-repeat 50%;
+        background-size: contain;
+
+        &--big {
+            width: 20vw;
+            height: 20vw;
+            right: -10vw;
+            top: -10vw;
+        }
+
+        &--medium {
+            //width: 15vw;
+            //height: 15vw;
+            //left: -7.5vw;
+            //top: calc(60% + 3vw);
+
+            width: 12vw;
+            height: 12vw;
+            left: -9.5vw;
+            top: calc(55% + 3vw);
+
+            .mobile.portrait & {
+                top: 57vw;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 9vw;
+    height: 2vw;
+    background: url("imgs/logo.svg") no-repeat center center;
+    background-size: contain;
+    margin: 3vw auto;
+
+    .mobile.portrait & {
+        width: 20vw;
+        height: 6vw;
+        bottom: 93vw;
+        margin-top: 2vw;
+    }
+}
+
+.z10 {
+    z-index: 10;
+}

@@ -1,0 +1,360 @@
+.text {
+    margin: 2.5vw auto;
+
+    .mobile.portrait & {
+        margin: 5vw auto;
+        br {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $breakpoint_desktop) {
+        margin: 5vw auto;
+        br {
+            display: none;
+        }
+    }
+    span {
+        @include gradientText;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    &-header {
+        font-weight: 800;
+        &--small {
+            font-size: 1vw;
+            text-align: left;
+            .mobile.portrait & {
+                font-size: 2.5vw;
+                margin-top: 10vw;
+            }
+        }
+    }
+
+    &--small {
+        font-size: 1vw;
+        text-align: left;
+        line-height: 1.5;
+        margin: 1.5vw 0;
+
+        .mobile.portrait & {
+            font-size: 2.5vw;
+            margin: 2.5vw 0;
+        }
+    }
+}
+
+
+.footer {
+    overflow: hidden;
+    position: relative;
+    &:before {
+        content: '';
+        background: url("imgs/flower.svg") no-repeat center center;
+        background-size: contain;
+        position: absolute;
+        width: 20vw;
+        height: 20vw;
+        bottom: -10vw;
+        left: -10vw;
+    }
+    &_logo {
+        width: 12.5vw;
+        height: 2.8vw;
+        background: url("imgs/logo.svg") no-repeat center center;
+        background-size: contain;
+        margin: 0 auto;
+        padding: 5vw 0;
+
+        .mobile.portrait & {
+            width: 25vw;
+            height: 6vw;
+        }
+        @media screen and (max-width: $breakpoint_desktop) {
+            width: 25vw;
+            height: 6vw;
+        }
+    }
+}
+
+.tc {
+    text-align: left;
+    margin: 5vw 0;
+
+    &_header {
+        font-weight: 800;
+    }
+
+    &_list {
+        margin: 2vw 0;
+        padding: 0;
+        padding-inline-start: 1em;
+
+        &-item {
+            margin-bottom: 1vw;
+        }
+    }
+}
+
+.tabs {
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 5vw 0;
+        border-radius: 1em;
+        overflow: hidden;
+        //padding: 3px;
+        background: linear-gradient(90deg, #F7E595 3.5%, #D59F39 90.72%);
+    }
+    input {
+        position: absolute;
+        left: -99999em;
+
+        &#daily:checked {
+            & ~ .tabs-wrapper [for="daily"]{
+                span {
+                    background: transparent;
+
+                    span {
+                        color: #000;
+                        -webkit-text-fill-color: #000;
+                    }
+                }
+            }
+        }
+        &#weekly:checked {
+            & ~ .tabs-wrapper [for="weekly"]{
+
+                span {
+                    background: transparent;
+
+                    span {
+                        color: #000;
+                        -webkit-text-fill-color: #000;
+                    }
+                }
+            }
+        }
+        &#completed:checked {
+            & ~ .tabs-wrapper [for="completed"]{
+                background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+                margin: 0;
+                overflow: visible;
+
+                &:after {
+                    content: attr(data-text);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc(100% + 4px);
+                    height: 100%;
+                    background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+                    display: block;
+                    color: #000;
+                }
+                span {
+                    background: transparent;
+
+                    span {
+                        color: #000;
+                        -webkit-text-fill-color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab {
+        font-size: 1.5vw;
+        line-height: 3;
+        display: inline-block;
+        //width: calc(100% / 3);
+        width: 33.16%;
+        cursor: pointer;
+        transition: background .3s ease;
+        position: relative;
+        overflow: hidden;
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+        &:first-of-type {
+            border-radius: 1em 0 0 1em;
+            > span {
+                margin-right: 3px;
+            }
+        }
+        &:last-of-type {
+            border-radius: 0 1em 1em 0;
+            > span {
+                margin-left: 3px;
+            }
+        }
+
+        span {
+            line-height: 2.6;
+            display: block;
+            background: $c_red_bg;
+
+            span {
+
+                @include gradientText;
+            }
+        }
+
+
+        &:hover {
+            //opacity: 1;
+        }
+
+        .mobile.portrait & {
+            //font-size: 4vw;
+            //margin: 15vw .5vw 0vw;
+        }
+
+        &-header {
+            @include gradientText;
+            font-size: 2.5vw;
+            font-weight: bold;
+
+            &--silver {
+                @include gradientText('silver');
+            }
+        }
+    }
+}
+
+.fn-tab {
+    display: none;
+}
+
+#daily:checked ~ .fn-daily,
+#daily:checked ~ .table .fn-daily,
+#daily:checked ~ .table .table_footer .table_btn-wrapper .fn-daily {
+    display: block;
+}
+#weekly:checked ~ .fn-weekly,
+#daily:checked ~ .table .fn-weekly,
+    #daily:checked ~ .table .table_footer .table_btn-wrapper .fn-weekly {
+    display: block;
+}
+#completed:checked ~ .fn-completed {
+    display: block;
+}
+
+#completed:checked ~ .table-wrapper {
+    background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+    margin: 1vw 0;
+    .table--primary {
+        &:after,
+        &:before {
+            display: none;
+        }
+
+        .table_body_col--val {
+            @include gradientText('silver');
+        }
+
+        .table_btn-wrapper {
+            background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+        }
+        .table_btn {
+            span {
+                @include gradientText('silver');
+            }
+
+            &:hover {
+                box-shadow: 0 0 50px 12px #F7F7F7, 0 0 12px 2px #999999;
+            }
+        }
+    }
+}
+
+
+.completed {
+
+    &-header {
+        font-weight: bold;
+        font-size: 2vw;
+        margin: 5vw 0 3vw;
+    }
+}
+
+.chbx {
+
+    &_item {
+        transition: opacity .3s ease;
+        &--op {
+            opacity: 0;
+        }
+    }
+    &:checked {
+        & + .chbx-label {
+            > span {
+                background: transparent;
+                &:after {
+                    content: '\2212';
+                    color: #000;
+                    -webkit-text-fill-color: #000;
+                }
+                span {
+                    color: #000;
+                    -webkit-text-fill-color: #000;
+                }
+            }
+            &:hover {
+                opacity: .9;
+            }
+        }
+        & ~ .chbx-content {
+            display: block;
+        }
+    }
+    &-content {
+        display: none;
+    }
+    &-label {
+        display: block;
+        cursor: pointer;
+        background: linear-gradient(90deg, #F7F7F7 3.5%, #999999 90.72%);
+        transition: opacity .3s ease;
+        &:hover {
+            //box-shadow: 0 0 25px 6px #f7f7f7, 0 0 6px 1px #999;
+            > span {
+                background: rgba(123,19,19,.9);
+            }
+
+        }
+
+        padding: 2px;
+        width: 100%;
+        margin: 1vw 0;
+        border-radius: .7em;
+        overflow: hidden;
+        line-height: 2.5;
+        > span {
+            display: block;
+            padding: 0 1vw;
+            background: $c_red_bg;
+            border-radius: .5em;
+            text-align: left;
+            position: relative;
+
+            &:after {
+                content: '\002B';
+                @include centered('y');
+                @include gradientText('silver');
+                right: 1vw;
+                font-size: 2em;
+            }
+
+            > span {
+                @include gradientText('silver');
+            }
+
+        }
+    }
+}
